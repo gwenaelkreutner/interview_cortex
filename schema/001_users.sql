@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS users (
+    user_id      VARCHAR(64)  NOT NULL PRIMARY KEY,
+    email        VARCHAR(256) NOT NULL,
+    full_name    VARCHAR(256),
+    brand        VARCHAR(128) NOT NULL,
+    persona      VARCHAR(128) NOT NULL,
+    is_active    BOOLEAN      NOT NULL DEFAULT TRUE,
+    created_at   TIMESTAMP_TZ NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+    updated_at   TIMESTAMP_TZ NOT NULL DEFAULT CURRENT_TIMESTAMP()
+);
