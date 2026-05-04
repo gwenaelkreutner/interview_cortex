@@ -1,12 +1,12 @@
 import logging
 import uuid
 
-from clients.base import CortexCallError, CortexResponse
+from clients.base import CortexCallError, CortexClientProtocol, CortexResponse
 
 logger = logging.getLogger(__name__)
 
 
-class CortexClient:
+class CortexClient(CortexClientProtocol):
     """
     Stub implementation of the Cortex Agent client.
     Replace with the real Snowflake Cortex client library in production.

@@ -1,12 +1,12 @@
 import logging
 import uuid
 
-from clients.base import EmailReceipt
+from clients.base import EmailClientProtocol, EmailReceipt
 
 logger = logging.getLogger(__name__)
 
 
-class EmailClient:
+class EmailClient(EmailClientProtocol):
     """
     Stub implementation of the email delivery client.
     Replace with a real SMTP / SES / SendGrid adapter in production.

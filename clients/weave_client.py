@@ -1,12 +1,12 @@
 import logging
 import uuid
 
-from clients.base import TraceContext
+from clients.base import TraceContext, WeaveClientProtocol
 
 logger = logging.getLogger(__name__)
 
 
-class WeaveClient:
+class WeaveClient(WeaveClientProtocol):
     """
     Stub implementation of the Weave observability client.
     Replace with real weave.init() + weave.op() calls in production.

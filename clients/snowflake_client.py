@@ -1,9 +1,11 @@
 import logging
 
+from clients.base import SnowflakeClientProtocol
+
 logger = logging.getLogger(__name__)
 
 
-class SnowflakeClient:
+class SnowflakeClient(SnowflakeClientProtocol):
     """
     In-memory stub that mimics Snowflake for local development.
     Replace with real snowflake-connector-python in production.
